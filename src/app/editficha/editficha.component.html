@@ -1,0 +1,40 @@
+
+<div class="box1">
+
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">  Edição de Fichas</h3>
+  </div>
+  <div class="panel-body">
+       <div class="radio" >
+      <label>
+      <input type="radio"  [(ngModel)]="status" value="Ativa"/>
+      Ativa
+       </label>
+    </div>
+    <div class="radio" >
+    <label>
+    <input type="radio"  [(ngModel)]="status" value="Desativada" />
+    Desativada
+    </label>
+    </div>
+    <br/>
+
+  <select class="form-control" [(ngModel)]="id_animal" >
+  <option [value]="id_animal" selected>{{nome}}</option>
+
+  </select>
+   <br/>
+  <textarea col="10" rows="5" class="form-control" [(ngModel)]="obs"></textarea>
+  <br/>
+   <button class="btn btn-success block" (click)="editAnimal()">Salvar</button>
+ </div>
+</div>
+  </div>
+  <div class="col-md-4"></div>
+
+  </div>
+  </div>

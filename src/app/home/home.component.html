@@ -1,0 +1,57 @@
+<div class="box1">
+  <h1>
+  Fichas&nbsp;<button class="btn btn-success" (click)="goCadFicha()">Nova ficha</button>
+  </h1>
+
+</div>
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+  <table class="table table-hover" id="table1">
+    <tr>
+    <th>Id</th>
+    <th>DtCadastro</th>
+    <th>Status</th>
+    <th>Ação</th>
+
+  </tr>
+    <tr *ngFor="let ficha of ficha">
+      <td>{{ficha.id_ficha}}</td>
+      <td>{{ficha.data_cadastro | date: 'dd/MM/yyyy'}}</td>
+
+      <td>{{ficha.status}}</td>
+      <td><button class="btn btn-primary" (click)="goEditFicha(ficha.id_ficha)">Editar</button>&nbsp;<button class="btn btn-danger" (click)="deleteFicha(ficha.id_ficha)">Deletar</button></td>
+    </tr>
+  </table>
+</div>
+<div class="col-md-4"></div>
+</div>
+<br/>
+
+<div class="box1">
+  <h1>
+  Animais&nbsp;<button class="btn btn-success" (click)="goCadAnimal()">Novo Animal</button>
+  </h1>
+
+</div>
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+  <table class="table table-hover" id="table1">
+    <tr >
+    <th>Id</th>
+    <th>Nome</th>
+    <th>Ação</th>
+
+  </tr>
+
+    <tr *ngFor="let animal of animal">
+      <td>{{animal.id_Animal}}</td>
+      <td>{{animal.nome}}</td>
+
+      <td><button class="btn btn-primary" (click)="goEditAnimal(animal.id_Animal)">Editar</button>&nbsp;<button class="btn btn-danger" (click)="deleteAnimal(animal.id_Animal)">Deletar</button></td>
+    </tr>
+  </table>
+</div>
+<div class="col-md-4"></div>
+</div>

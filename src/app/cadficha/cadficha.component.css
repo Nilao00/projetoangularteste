@@ -1,0 +1,21 @@
+.box1{
+  text-align: center;
+  position: relative;
+  padding-top: 5rem;
+}
+#table1{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#box2{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+textarea {
+   resize: none;
+}
